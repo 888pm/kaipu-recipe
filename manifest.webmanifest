@@ -1,0 +1,19 @@
+{
+  "name": "开饭啦菜谱",
+  "short_name": "开饭啦",
+  "description": "猫猫主题做菜点菜小程序，连接小红书/抖音教程",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff5f0",
+  "theme_color": "#ff2e4d",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
