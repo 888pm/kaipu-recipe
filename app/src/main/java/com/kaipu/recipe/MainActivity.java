@@ -19,6 +19,9 @@ public class MainActivity extends Activity {
         WebSettings ws = wv.getSettings();
         ws.setJavaScriptEnabled(true);
         ws.setDomStorageEnabled(true);
+        ws.setAllowFileAccess(true);
+        ws.setAllowFileAccessFromFileURLs(true);
+        ws.setAllowUniversalAccessFromFileURLs(true);
         ws.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         wv.setWebViewClient(new WebViewClient() {
             @Override
@@ -30,8 +33,8 @@ public class MainActivity extends Activity {
                 return handleExternal(req.getUrl().toString());
             }
             private boolean handleExternal(String url) {
-                if (url.startsWith("https://888pm.github.io/")) {
-                    return false; // 站内页面留在 App 内
+                if (url.startsWith("file:///android_asset/")) {
+                    return false; // 站内页面（本地网页）留在 App 内
                 }
                 // 小红书/抖音等外部链接，跳到系统浏览器或对应 App 打开
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
@@ -40,7 +43,7 @@ public class MainActivity extends Activity {
             }
         });
         setContentView(wv);
-        wv.loadUrl("https://888pm.github.io/kaipu-recipe/");
+        wv.loadUrl("file:///android_asset/index.html");
     }
 
     @Override
