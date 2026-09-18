@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
                 return true;
             }
         });
+        wv.setBackgroundColor(0xFFffd0e4); // 与开屏同色，避免 WebView 初始黑/白闪
         setContentView(wv);
         wv.loadUrl("file:///android_asset/index.html");
     }
