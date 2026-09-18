@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pink_light">#ffd0e4</color>
+    <color name="pink_bg">#ff9ec4</color>
+    <color name="pink_deep">#ff7fb0</color>
+    <color name="ic_launcher_background">#ff9ec4</color>
+</resources>
