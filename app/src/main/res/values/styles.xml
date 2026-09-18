@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- 旧版（API<31）启动窗口背景：粉色渐变 -->
         <item name="android:windowBackground">@drawable/splash_bg</item>
         <item name="android:statusBarColor">@color/pink_bg</item>
+        <!-- Android 12+ (API31+) SplashScreen：显式粉色背景，避免回退成黑屏 -->
+        <item name="android:windowSplashScreenBackground">@color/pink_bg</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="android:windowSplashScreenAnimationDuration">120</item>
     </style>
 </resources>
